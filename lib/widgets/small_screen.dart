@@ -10,7 +10,6 @@ class _SmallScreenState extends State<SmallScreen> {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints.expand(),
-      child: Text(MediaQuery.of(context).size.width.toString()),
       color: Colors.teal,
     );
   }

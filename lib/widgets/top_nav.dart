@@ -18,7 +18,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) {
               ],
             )
           : IconButton(
-              color: Colors.amber,
+              color: lightGrey,
               onPressed: () {
                 key.currentState!.openDrawer();
               },
@@ -75,34 +75,36 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) {
             color: lightGrey,
           ),
           SizedBox(width: 24),
-          Responsiveness.isSmallScreen(context)
-              ? Text('')
-              : CustomText(
-                  text: 'Mohamed Hasan',
-                  color: lightGrey,
+          Row(
+            children: [
+              CustomText(
+                text: 'Mohamed Hasan',
+                color: lightGrey,
+              ),
+              SizedBox(width: 16),
+              Container(
+                decoration: BoxDecoration(
+                  color: light,
+                  borderRadius: BorderRadius.circular(30),
                 ),
-          SizedBox(width: 16),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(30),
-            ),
-            child: Container(
-              padding: EdgeInsets.all(2),
-              margin: EdgeInsets.all(2),
-              child: CircleAvatar(
-                backgroundColor: light,
-                child: Icon(
-                  Icons.person_outline,
-                  color: dark,
+                child: Container(
+                  padding: EdgeInsets.all(2),
+                  margin: EdgeInsets.all(2),
+                  child: CircleAvatar(
+                    backgroundColor: light,
+                    child: Icon(
+                      Icons.person_outline,
+                      color: dark,
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           )
         ],
       ),
       iconTheme: IconThemeData(
         color: dark,
       ),
-      backgroundColor: Colors.transparent);
+      backgroundColor: light);
 }
