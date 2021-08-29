@@ -61,6 +61,7 @@ class SideMenu extends StatelessWidget {
                         if (Responsiveness.isSmallScreen(context)) {
                           Get.back();
                         }
+                        navigationController.navigateTo(itemName);
                       }
                     }))
                 .toList(),

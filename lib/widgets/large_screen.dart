@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_dashboard/helpers/local_navigator.dart';
 import 'package:web_dashboard/routing/routes.dart';
 import 'package:web_dashboard/widgets/horizontal_menu_item.dart';
 import 'package:web_dashboard/widgets/side_menu.dart';
@@ -17,11 +18,7 @@ class _LargeScreenState extends State<LargeScreen> {
     return Row(
       children: [
         Expanded(flex: 1, child: SideMenu()),
-        Expanded(
-            flex: 5,
-            child: Container(
-              color: Colors.indigo,
-            )),
+        Expanded(flex: 5, child: localNavigator()),
       ],
     );
   }
