@@ -1,6 +1,4 @@
-import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:web_dashboard/pages/overview/widgets/bar_chart.dart';
 import 'package:web_dashboard/pages/overview/widgets/info_card.dart';
 
 class OverviewCardsLargeScreen extends StatelessWidget {
@@ -39,13 +37,8 @@ class OverviewCardsLargeScreen extends StatelessWidget {
               onTap: () {},
               topColor: Colors.indigo,
             ),
-            SizedBox(width: _width / 64),
           ],
         ),
-        Container(
-            width: _width / 2,
-            height: 300,
-            child: SimpleBarChart.withSampleData())
       ],
     );
   }
