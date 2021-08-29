@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:web_dashboard/helpers/responsiveness.dart';
 import 'package:web_dashboard/widgets/large_screen.dart';
 import 'package:web_dashboard/widgets/side_menu.dart';
@@ -12,6 +13,7 @@ class SiteLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         key: scaffoldKey,
+        extendBodyBehindAppBar: true,
         drawer: Drawer(
           child: SideMenu(),
         ),

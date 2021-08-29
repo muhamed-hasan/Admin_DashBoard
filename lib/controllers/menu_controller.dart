@@ -6,7 +6,7 @@ import 'package:web_dashboard/routing/routes.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
-  var activeItem = overviewPageRoute.obs;
+  var activeItem = overviewPageDisplayName.obs;
   var hoverItem = ''.obs;
 
   changeActiveItem(String itemName) {

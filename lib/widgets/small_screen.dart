@@ -9,6 +9,9 @@ class SmallScreen extends StatefulWidget {
 class _SmallScreenState extends State<SmallScreen> {
   @override
   Widget build(BuildContext context) {
-    return localNavigator();
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: localNavigator(),
+    );
   }
 }
