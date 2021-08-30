@@ -22,26 +22,24 @@ class InfoCardSmall extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: InkWell(
-        child: Container(
-          padding: EdgeInsets.all(24),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              border:
-                  Border.all(color: isActive! ? active : lightGrey, width: .5)),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CustomText(
-                  text: title,
-                  size: 24,
-                  weight: FontWeight.w300,
-                  color: isActive! ? active : lightGrey),
-              CustomText(
-                  text: value,
-                  size: 24,
-                  weight: FontWeight.bold,
-                  color: isActive! ? active : lightGrey)
-            ],
+        child: Card(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomText(
+                    text: title,
+                    size: 24,
+                    weight: FontWeight.w300,
+                    color: isActive! ? active : lightGrey),
+                CustomText(
+                    text: value,
+                    size: 24,
+                    weight: FontWeight.bold,
+                    color: isActive! ? active : lightGrey)
+              ],
+            ),
           ),
         ),
       ),
