@@ -6,6 +6,7 @@ import 'package:web_dashboard/constants/style.dart';
 import 'package:web_dashboard/controllers/menu_controller.dart';
 import 'package:web_dashboard/controllers/navigation_controller.dart';
 import 'package:web_dashboard/layout.dart';
+import 'package:web_dashboard/pages/authentication/authentication.dart';
 
 void main() {
   Get.put(MenuController());
@@ -39,6 +40,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SiteLayout();
+    return AuthenticationPage();
   }
 }
