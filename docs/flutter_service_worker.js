@@ -13,7 +13,7 @@ const RESOURCES = {
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "ff0e17d5c8f38567263339e44e9e32ae",
-"/Admin_DashBoard": "ff0e17d5c8f38567263339e44e9e32ae",
+"/Admin_DashBoard/": "ff0e17d5c8f38567263339e44e9e32ae",
 "main.dart.js": "9ab5a3c034c549b7cb5255340c98f4ba",
 "manifest.json": "a73862b97ad06cce4e935d4906d9cf25",
 "version.json": "0507ec11c5c92cea90b4f83e2e3b2033"
@@ -22,7 +22,7 @@ const RESOURCES = {
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "/Admin_DashBoard",
+  "/Admin_DashBoard/",
 "main.dart.js",
 "index.html",
 "assets/NOTICES",
@@ -67,7 +67,7 @@ self.addEventListener("activate", function(event) {
       for (var request of await contentCache.keys()) {
         var key = request.url.substring(origin.length + 1);
         if (key == "") {
-          key = "/Admin_DashBoard";
+          key = "/Admin_DashBoard/";
         }
         // If a resource from the old manifest is not in the new cache, or if
         // the MD5 sum has changed, delete it. Otherwise the resource is left
@@ -109,7 +109,7 @@ self.addEventListener("fetch", (event) => {
     key = key.split('?v=')[0];
   }
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '') {
-    key = '/Admin_DashBoard';
+    key = '/Admin_DashBoard/';
   }
   // If the URL is not the RESOURCE list then return to signal that the
   // browser should take over.
@@ -117,7 +117,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   // If the URL is the index.html, perform an online-first request.
-  if (key == '/Admin_DashBoard') {
+  if (key == '/Admin_DashBoard/') {
     return onlineFirst(event);
   }
   event.respondWith(caches.open(CACHE_NAME)
@@ -156,7 +156,7 @@ async function downloadOffline() {
   for (var request of await contentCache.keys()) {
     var key = request.url.substring(origin.length + 1);
     if (key == "") {
-      key = "/Admin_DashBoard";
+      key = "/Admin_DashBoard/";
     }
     currentContent[key] = true;
   }
