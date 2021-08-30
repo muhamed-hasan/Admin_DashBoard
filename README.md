@@ -1,6 +1,9 @@
 # web_dashboard
 
-A new Flutter project.
+Flutter responsive web admin panel with getx 
+
+### view the website 
+https://muhamed-hasan.github.io/Admin_DashBoard/
 
 ## Getting Started
 
